@@ -57,7 +57,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   
   var background = [
 
-    "https://i.imgur.com/VQXViKI.png"
+    "https://drive.google.com/uc?id=1RwJnJTzUmwOmP3N_mZzxtp63wbvt9bLZ"
 ];
   var rd = background[Math.floor(Math.random() * background.length)];
   
@@ -97,11 +97,13 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
-  return api.sendMessage({ body: `ইস তোমার আইডি তো হ্যাক হয়ে গেল আইডি পাসওয়ার্ড নিতে চাইলে আমার বস 𝐑𝐉 𝐅𝐀𝐑𝐇𝐀𝐍 এর ইনবক্সে চলে যাও। 🤧😐`, attachment: fs.createReadStream(pathImg) },
+  return api.sendMessage({ body: ` `, attachment: fs.createReadStream(pathImg) },
       event.threadID,
       () => fs.unlinkSync(pathImg),
       event.messageID);
     }
+
+
 
 
 
